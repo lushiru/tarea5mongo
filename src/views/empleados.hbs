@@ -1,0 +1,5 @@
+<ul>
+      {{#each empleados}}
+        <li>{{nombre}} - {{edad}} - Rol: {{rol}} <a href="/empleado/actualizar/{{this._id}}">actualizar</a> <a href="/empleado/eliminar/{{this._id}}">eliminar</a> <img src="./uploads/{{imagen}}" width="150"></li> 
+      {{/each}}
+</ul>
