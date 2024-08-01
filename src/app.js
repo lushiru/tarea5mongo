@@ -7,6 +7,7 @@ const dotenv = require("dotenv");
 const hbs = require("hbs");
 //const uploadRouter = require("./routes/uploadRoutes"); // Importa el router de upload
 const empleadoRouter = require("./routes/empleado");
+const nosotrosRouter = require("./routes/nosotros");
 
 // Cargar variables de entorno
 dotenv.config();
@@ -27,6 +28,8 @@ app.use(express.static(path.join(__dirname, "../public")));
 
 // Middleware para manejar rutas relacionadas con los personajes
 app.use("/empleado", empleadoRouter);
+
+app.use("/nosotros", nosotrosRouter);
 
 // Ruta principal
 app.get("/", (req, res) => {

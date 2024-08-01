@@ -10,7 +10,10 @@
     align-items: center;
     justify-content: center;
 }
-h1,h2,p,form,img {
+a{
+    text-decoration: none;
+}
+h1,h2,p,form{
     padding: 2rem;
 }
 nav{
@@ -22,6 +25,9 @@ nav{
   justify-content: center;
 }
 .nav li{
+    list-style: none;
+}
+.nav li a{
     display: flex;
     flex-direction: column; 
     list-style: none;
@@ -30,4 +36,53 @@ nav{
     padding: 10px;
     border-radius: 5px;
     margin: 10px;
+}
+.nav a:hover{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: black;
+    color:white;
+}
+button{
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+.activado{
+    padding: 10px;
+    border-radius: 5px;
+    color:black;
+    font-weight: bold;
+}
+.boton{
+    background-color:cadetblue;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+.listaalumnos{
+    margin:3rem;
+    padding: 2rem;
+    background-color: burlywood; 
+    border-radius: 15px;   
+}
+.listaalumnos li{
+    list-style: none;
+    font-size: 20px;
+    padding: 1rem;
+    color:darkblue;
+}
+span{
+    color:cornflowerblue;
+}
+table{
+    margin-bottom: 2rem;
+}
+footer{
+    padding: 1rem;
+    width: 100%;
+    background-color: burlywood;
+    color: aliceblue;
+    text-align: center;
 }

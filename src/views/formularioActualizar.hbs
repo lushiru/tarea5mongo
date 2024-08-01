@@ -1,16 +1,42 @@
-<h1>Crear Nuevo Empleado</h1>
+<h1>Actualizar Empleado <span>{{empleado.nombre}}</span></h1>
+<table>
 <form action="/empleado/actualizar/{{empleado._id}}" method="POST" enctype="multipart/form-data">
+  <tr>
+  <td>
   <label for="nombre">Nombre:</label>
-  <input type="text" id="nombre" name="nombre" value="{{empleado.nombre}}" required><br><br>
-
+  </td>
+  <td>
+  <input type="text" id="nombre" name="nombre" value="{{empleado.nombre}}" required>
+  </td>
+  </tr>
+  <tr>
+  <td>
   <label for="edad">Edad:</label>
-  <input type="number" id="edad" name="edad" value="{{empleado.edad}}" required><br><br>
-
+  </td>
+  <td>
+  <input type="number" id="edad" name="edad" value="{{empleado.edad}}" required>
+  </td>
+  </tr>
+  <tr>
+  <td>
   <label for="rol">Rol:</label>
-  <input type="text" id="rol" name="rol" value="{{empleado.rol}}" required><br><br>
-
+  </td>
+  <td>
+  <input type="text" id="rol" name="rol" value="{{empleado.rol}}" required>
+  </td>
+  </tr>
+  <tr>
+  <td>
   <label for="imagen">Imagen:</label>
-  <input type="file" id="imagen" name="imagen" ><br><br>
-
+  </td>
+  <td>
+  <input type="file" id="imagen" name="imagen" >
+  </td>
+  </tr>
+  <tr>
+  <td>
   <button type="submit">Actualizar Empleado</button>
+  </td>
+  </tr>
 </form>
+</table>

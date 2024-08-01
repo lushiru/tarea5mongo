@@ -47,14 +47,26 @@ const todosEmpleados = async (req, res) => {
     const { nombre, edad, rol } = req.body;
     
     const imagenPath = req.file ? req.file.filename : ''; 
-  
-    try {
-      await Empleado.findByIdAndUpdate(req.params.id, {
+
+    let act={}
+
+    if(imagenPath!=""){
+      act={
         nombre,
         edad: parseInt(edad),
         rol,
         imagen: imagenPath
-      });
+      }
+    }else{
+      act={
+        nombre,
+        edad: parseInt(edad),
+        rol,
+      }
+    }
+  
+    try {
+      await Empleado.findByIdAndUpdate(req.params.id, act);
       res.redirect("/empleado")
     } catch (error) {
       console.error("Error al crear el Empleado:", error);

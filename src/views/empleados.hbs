@@ -1,5 +1,7 @@
-<ul>
+<h1>Lista de Empleados</h1>
+<table border="1">
+      <tr><th width="150">Nombre</th><th width="100">Edad</th><th width="150">Rol</th><th width="100">Actualizar</th><th width="100">Eliminar</th><th >Imagen</th></tr>
       {{#each empleados}}
-        <li>{{nombre}} - {{edad}} - Rol: {{rol}} <a href="/empleado/actualizar/{{this._id}}">actualizar</a> <a href="/empleado/eliminar/{{this._id}}">eliminar</a> <img src="./uploads/{{imagen}}" width="150"></li> 
+        <tr align="center"><td>{{nombre}}</td><td>{{edad}}</td><td>{{rol}}</td><td><a href="/empleado/actualizar/{{this._id}}" class="boton">actualizar</a></td><td><a href="/empleado/eliminar/{{this._id}}" class="boton">eliminar</a></td><td><img src="./uploads/{{imagen}}" width="150"></td></tr> 
       {{/each}}
-</ul>
+</table>
